@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="message">
+        <h1>Let's Chat</h1>
+        <h3>
+          Whether you have a question, want to start a project or simply want to
+          connect.
+        </h3>
+        <h3>Feel free to send me a message in the contact form</h3>
+      </div>
+      <div class="form">
+        <h1>Contact</h1>
+        <form>
+          <div class="form-group">
+            <label for="name">Name*</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter Your Name"
+              required
+            />
+            <small id="nameError"></small>
+          </div>
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter Your Email"
+              required
+            />
+            <small id="emailError"></small>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject*</label>
+            <select name="subject" id="subject" required>
+              <option value="" disabled selected>Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="project">Project Proposal</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message*</label>
+            <textarea
+              id="message"
+              placeholder="Write Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <small id="messageError"></small>
+          </div>
+
+          <div class="but">
+            <button id="btn" type="submit">Send Message</button>
+            <span id="spinner">⏳</span>
+            <p id="formFeedback"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./script.js" charset="UTF-8"></script>
+  </body>
+</html>
